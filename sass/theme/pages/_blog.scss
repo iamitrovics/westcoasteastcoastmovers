@@ -450,12 +450,21 @@
                     color:$black;
                 }
             }
+            .video-holder {
+                text-align: center;
+            }
             iframe {
                 max-width: 100%;
             }
             .image-holder {
                 margin-bottom: 40px;
                 margin-top: 10px;
+                text-align: center;
+                small {
+                    text-align: center;
+                    display: block;
+                    padding-top: 10px;
+                }
                 img {
                     display: block;
                     margin:0px auto;
@@ -464,24 +473,46 @@
             }            
         }
         .blog-share {
-            text-align: center;
             margin-top: 40px;
             margin-bottom: 60px;
+            background:$red;
+            border-radius: 15px;
+            padding:15px;
+            .quote-form {
+                padding-left: 0px;
+                span.form-title {
+                    margin-bottom: 20px;
+                }
+                span.label {
+                    color:$black;
+                }
+            }
             ul {
-                margin-bottom: 0;
+                margin:0px;
+                list-style: none;
                 li {
-                    display: inline-block;
-                    margin-left: 0.6em;
-                    margin-right: 0.6em;
                     a {
-                        font-size: 1em;
-                        color: #222222;
                         &:hover {
-                            color: $blue;
+                            color:$white;
                         }
                     }
                 }
             }
+            // ul {
+            //     margin-bottom: 0;
+            //     li {
+            //         display: inline-block;
+            //         margin-left: 0.6em;
+            //         margin-right: 0.6em;
+            //         a {
+            //             font-size: 1em;
+            //             color: #222222;
+            //             &:hover {
+            //                 color: $blue;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
     .blog-navigation {
@@ -893,6 +924,50 @@
                     }
                 }
             }
+        }
+    }
+}
+
+// CTGA
+.quote-cta--single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    background:$red;
+    padding:45px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    @include media-breakpoint-only(md) {
+        padding:30px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding:30px;
+        text-align: center;
+        display: block;
+    }
+    span.title {
+        font-size: 32px;
+        color:$white;
+        margin-bottom: 0px;
+        margin-right: 40px;
+        line-height: 1.2;
+        width: 50%;
+        @include media-breakpoint-only(md) {
+            font-size: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-right: 0px;
+        }
+    }
+    a.btn-cta {
+        @include submit-btn;
+        background:$white;
+        color:$black;
+        &:hover {
+            color:$white;
         }
     }
 }

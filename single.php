@@ -79,21 +79,28 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         </div>
                                         <!-- // video  -->
 
+                                    <?php elseif( get_row_layout() == 'quote_cta' ): ?>
+
+                                        <div class="quote-cta--single">
+                                            <span class="title"><?php the_sub_field('cta_title'); ?></span>
+                                            <a href="#bottom-form" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
+                                        </div>
+                                        <!-- // single  -->                                        
+
                                     <?php endif; ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
 
                         </div>
                         <!-- /.blog-content -->
-                        <div class="blog-share">
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                            </ul>
+
+                        <div class="blog-share" id="bottom-form">
+                            
+                            <?php include(TEMPLATEPATH . '/inc/inc-quote.php'); ?>
+
                         </div>
                         <!-- /.blog-share -->
+
                         <div class="blog-navigation">
                             <?php $previous = get_previous_post();
                             $next = get_next_post(); ?>
