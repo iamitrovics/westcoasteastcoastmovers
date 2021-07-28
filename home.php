@@ -17,21 +17,6 @@
         <!-- /.container -->
     </header>
     <div id="blogs">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="blog-filter">
-                        <ul>
-                            <?php echo get_the_category_list(', '); ?>
-                        </ul>
-                    </div>
-                    <!-- /.blog-filter -->
-                </div>
-                <!-- /.col-md-12 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
         <div class="blog-items">
             <div class="container">
                 <div class="row">
