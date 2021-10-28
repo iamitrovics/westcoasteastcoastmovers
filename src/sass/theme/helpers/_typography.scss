@@ -1,0 +1,307 @@
+// Import fonts and fonts variables
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+        url('../fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ek Mukta Regular';
+    src: url('../fonts/EkMukta-Regular.woff2') format('woff2'),
+        url('../fonts/EkMukta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ek Mukta Bold';
+    src: url('../fonts/EkMukta-Bold.woff2') format('woff2'),
+        url('../fonts/EkMukta-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$robo-reg:'Roboto Regular';
+$robo-med:'Roboto Medium';
+$robo-bold:  'Roboto Bold';
+$robo-italic:'Roboto Italic';
+$ek-reg:  'Ek Mukta Regular';
+$ek-bold:  'Ek Mukta Bold';
+
+$font-main: 'Roboto Regular';
+$font-heading: 'Roboto Medium';
+
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.fa, .fab, .fas, .fal, .far, .twf {
+    font-family: 'icomoon';
+}
+.twf {
+  display: inline-block;
+}
+
+.fa, .fab, .fas {
+    font-style: normal!important;
+}
+.fa, .fas {
+    font-weight: 900;
+}
+.fal {
+    font-weight: 300;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?wgebkx');
+  src:  url('../fonts/icomoon.eot?wgebkx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?wgebkx') format('truetype'),
+    url('../fonts/icomoon.woff?wgebkx') format('woff'),
+    url('../fonts/icomoon.svg?wgebkx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-quote-right:before, .fa-quote-right:before {
+  content: "\e91a";
+}
+.icon-user-tie:before, .fa-user-tie:before {
+  content: "\e913";
+}
+.icon-radiation-alt:before, .fa-radiation-alt:before {
+  content: "\e914";
+}
+.icon-truck:before, .fa-truck:before {
+  content: "\e915";
+}
+.icon-clock:before, .fa-clock:before {
+  content: "\e916";
+}
+.icon-file-alt:before, .fa-file-alt:before {
+  content: "\e917";
+}
+.icon-expand:before, .fa-expand:before {
+  content: "\e918";
+}
+.icon-utensils-alt:before, .fa-utensils-alt:before {
+  content: "\e919";
+}
+
+.icon-long-arrow-left:before {
+  content: "\e911";
+}
+.icon-long-arrow-right:before {
+  content: "\e912";
+}
+  
+  .icon-google-plus-g:before, .fa-google-plus-g:before {
+    content: "\e900";
+  }
+  .icon-pinterest-p:before, .fa-pinterest-p:before {
+    content: "\e901";
+  }
+  .icon-twitter:before, .fa-twitter:before {
+    content: "\e902";
+  }
+  .icon-facebook-f:before, .fa-facebook-f:before {
+    content: "\e903";
+  }
+  .icon-yelp:before,  .fa-yelp:before,  .twf-yelp:before {
+    content: "\e904";
+  }
+  .icon-phone:before, .fa-phone:before {
+    content: "\e905";
+  }
+  .icon-chevron-left:before {
+    content: "\e906";
+  }
+  .icon-chevron-right:before {
+    content: "\e907";
+  }
+  .icon-angle-down:before {
+    content: "\e908";
+  }
+  .icon-check-circle:before {
+    content: "\e909";
+  }
+  .icon-clipboard-list:before, .fa-clipboard-list:before, .twf-et-clipboard:before {
+    content: "\e90a";
+  }
+  .icon-car-garage:before, .fa-car-garage:before {
+    content: "\e90b";
+  }
+  .icon-car:before, .fa-car:before {
+    content: "\e90c";
+  }
+  .icon-home:before, .fa-home:before {
+    content: "\e90d";
+  }
+  .icon-angle-left:before {
+    content: "\e90e";
+  }
+  .icon-angle-right:before {
+    content: "\e90f";
+  }
+  .icon-phone-alt:before, .twf-ln-phone-handset:before {
+    content: "\e910";
+  }
+  
+
+body { 
+    font: {
+        size:$base-size;
+        family: $font-main;
+    }
+    -webkit-text-size-adjust: 100%;  //fix for iOS 
+    font-weight: 400;
+    line-height: 1.78571;
+    color: #898989;
+    text-align: left;
+    background-color: #fff;
+    margin: 0;
+}
+
+p {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 1.78571;
+    color: #898989;
+    margin-top: 0;
+    margin-bottom: 20px;
+    strong {
+        font-family: $robo-bold;
+        font-weight: normal;
+    }
+    a {
+        color: #053164;
+    }
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+// reset
+a {
+    @include animate-fade;
+    text-decoration: none;
+    color: #053164;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+button, input[type="submit"] {
+    @include animate-fade;
+    cursor: pointer;
+}
+
+
+address {
+    margin:0px;
+    padding:0px;
+}
+
+i {
+    font-style: normal;
+}
+
+
+iframe {
+    border:0;
+}
+
+img.wp-post-image, article img, figure, img, #secondary img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+
+}
