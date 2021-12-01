@@ -129,6 +129,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php else: ?>
 	<?php endif; ?>
 
+	<div id="fixed-cta">
+		
+		<a href="tel:<?php the_field('phone_number_comp_info', 'options'); ?>">
+			<i class="twf twf-ln-phone-handset"></i>
+			<div class="phone-text">
+				<small class="label">Get a Free Estimate</small>
+				<span><?php the_field('phone_number_comp_info', 'options'); ?></span>
+			</div>
+			<!-- // text  -->
+		</a>
+
+	</div>
+	<!-- // fixed cta  -->		
+
 	<?php wp_footer(); ?>
 
 	<div class="modal-overlay disclaimer-modal" data-my-element="tooltip-modal">
