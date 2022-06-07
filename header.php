@@ -33,43 +33,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php the_field('body_code_snippet', 'options'); ?>
 	<?php endif; ?>
 
-    <div class="menu-overlay"></div>
-        <div class="main-menu-sidebar">
-            <header class="visible-xs visible-sm visible-md">
-                <a href="javascript:;" class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close.svg" alt="Close Menu"></a>
-            </header>
-            <!-- // header  -->        
-            <div id="mobile__brand">
-                <img src="<?php the_field('mobile_logo_general', 'options'); ?>" alt="<?php bloginfo('name'); ?>">
-            </div>
-            <!-- // brand  -->
-            <div id="menu">
-                <ul>
-                    <?php if( have_rows('menu_items_mobile', 'options') ): ?>
-                        <?php while( have_rows('menu_items_mobile', 'options') ): the_row(); ?>
+	<div class="menu-overlay"></div>
+	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
 
-                            <?php if (get_sub_field('item_type') == 'Single Item') { ?>
-                                <li><a href="<?php the_sub_field('item_link'); ?>"><?php the_sub_field('item_label'); ?></a></li>
-                            <?php } elseif (get_sub_field('item_type') == 'Dropdown') { ?>
-                                <li>
-                                    <a href="<?php the_sub_field('item_link'); ?>"><?php the_sub_field('item_label'); ?></a>
-                                    <ul>
-                                        <?php if( have_rows('dropdown_items') ): ?>
-                                            <?php while( have_rows('dropdown_items') ): the_row(); ?>
-                                                <li><a href="<?php the_sub_field('link_to_page'); ?>"><?php the_sub_field('label_dropdown'); ?></a></li>
-                                            <?php endwhile; ?>
-                                        <?php endif; ?>
-                                    </ul>
-                                </li>
-                            <?php } ?>   
+		<header>
+			<a href="javascript:;" class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></a>
+		</header>
+		<!-- // header  -->
 
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </ul>
-            </div>
-            <!-- // menu  -->
-        </div>
-        <!-- // mobile menu  -->
+
+		<nav id="sidebar-menu-wrapper">
+			<img src="<?php the_field('website_logo_general', 'options'); ?>" alt="" class="mobile-logo">
+			<div id="menu">    
+				<ul class="nav-links">
+					<?php
+					wp_nav_menu( array(
+						'menu'              => 'mobile',
+						'theme_location'    => 'mobile',
+						'depth'             => 2,
+						'container'         => false,
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => false,
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'items_wrap' => '%3$s',
+						'walker'            => new wp_bootstrap_navwalkermobile())
+					);
+					?>  
+				</ul>
+			</div>
+			<!-- // menu  -->
+
+		</nav> 
+		<!-- // sidebar menu wrapper  -->
+
+	</div>
+	<!-- // main menu sidebar  -->	
 
         <div id="cor-notice">
             <?php the_field('top_notice_text', 'options'); ?>
@@ -134,14 +133,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                     <!-- /.col -->
                     <div class="col">
-                        <div id="top__mobile">
-                            <a href="javascript:;" class="menu-btn">
+
+                        <div id="mobile-menu--btn" class="d-lg-none">
+                            <a href="javascript:;">
                                 <span></span>
                                 <span></span>
-                                <span class="last-span"></span>
+                                <span></span>
+                                <div class="clearfix"></div>
                             </a>
                         </div>
-                        <!-- /#top__mobile -->
+                        <!-- // mobile  -->	
+
                     </div>
                     <!-- /.col -->
                 </div>
