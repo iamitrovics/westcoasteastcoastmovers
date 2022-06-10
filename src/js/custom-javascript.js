@@ -1,12 +1,11 @@
 (function ($) {
     jQuery(document).ready(function () {
-        $('#cookie-notice').addClass('slide-up');
 
-        $('#close-notice, #accept-cookie').click(function (e) {
+        $('#close-notice, #accept-cookie').click(function(e) {
             e.preventDefault();
             $("#cookie-notice").removeClass("slide-up");
             $("#cookie-notice").addClass("slide-down");
-        });
+        });        
 
         $('.quote-form #q2 .add-car-btn').click(function () {
             $(this).fadeOut(300);

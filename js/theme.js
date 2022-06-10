@@ -7949,7 +7949,6 @@ if (typeof jQuery === 'undefined') {
 }(document, jQuery);
 (function ($) {
   jQuery(document).ready(function () {
-    $('#cookie-notice').addClass('slide-up');
     $('#close-notice, #accept-cookie').click(function (e) {
       e.preventDefault();
       $("#cookie-notice").removeClass("slide-up");
