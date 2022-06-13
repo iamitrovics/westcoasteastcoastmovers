@@ -235,6 +235,7 @@ body {
     text-align: center;
     font-family: $robo-reg;
     bottom: 0;
+    display: none;
     &.slide-up {
         -webkit-animation-name: slideInUp;
         animation-name: slideInUp;
@@ -242,6 +243,7 @@ body {
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+        display: block!important;
     }
     &.slide-down {
         -webkit-animation-name: slideOutDown;
@@ -250,6 +252,7 @@ body {
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+        opacity: 0;
     }
     &-in {
         padding: 15px 30px;
